@@ -1,9 +1,9 @@
 <template>
     <div class="blog-container">
-        <div :for="post in posts.data" :key="post.id">
+        <div v-for="post in posts.data" :key="post.id">
             <img class="post-img" :src="post.attributes.image.data.attributes.url" :alt="post.attributes.title">
-            <h2>{{  post.attributes.title }}</h2>
-            <p>{{  post.attributes.summary }}</p>
+            <h2>{{ post.attributes.title }}</h2>
+            <p>{{ post.attributes.summary }}</p>
         </div>
     </div>
 </template>
